@@ -6,7 +6,7 @@ const sass = require("gulp-sass")(require("sass"));
 
 
 
-function compilesass() {
+function build() {
 	return gulp
 		.src("./build/scss/*.scss")
 		.pipe(sass().on("error", sass.logError))
@@ -17,4 +17,4 @@ function watchTask() {
 	gulp.watch("./build/scss/*.scss", compilesass);
 }
 
-exports.default = gulp.series(compilesass,watchTask)
+exports.default = gulp.series(build,watchTask)
