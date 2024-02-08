@@ -347,7 +347,7 @@
     @include navbar-vertical-align($input-height-small);
   }
   &.btn-xs {
-    @include navbar-vertical-align(22);
+    @include navbar-vertical-align(22px);
   }
 }
 
