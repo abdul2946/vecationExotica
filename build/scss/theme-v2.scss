@@ -1,5 +1,4 @@
-// SCSS IMPORTS 
-// ============
+
 /*
 Name: 			theme-v2
 Author: 		waituk - (http://www.waituk.net)
@@ -35,27 +34,21 @@ Version: 		1.2.7
 1. General styles and resets
 -------------------------------------------------------------------*/
 
-// ---  MODIFIERS  ---
 @import 'modifiers/custom-variables';
 @import 'modifiers/mixins';
 
-//  --- BOOTSTRAP ---
 @import 'bootstrap-custom';
 @import 'vendors/bootstrap/bootstrap/variables';
 @import 'vendors/bootstrap/bootstrap/mixins';
 
-// ---  BASE  ---
 @import 'base/base';
 
-// -- THEME ---
 @import 'skins/color2';
 @import 'base/colors';
 @import 'base/typography';
 
-// // ---  PRELOADER ---
 @import 'components/preloader';
 
-// // ---  LAYOUT  --- 
 /*------------------------------------------------------------------
 2. Header / #header
 -------------------------------------------------------------------*/
@@ -69,7 +62,6 @@ Version: 		1.2.7
 @import 'layout/sidebar';
 @import 'layout/boxed-layout';
 
-// // ---  COMPONENTS  ---
 @import 'components/external-override';
 @import 'components/testimonial';
 @import 'components/services';
@@ -150,7 +142,6 @@ Version: 		1.2.7
 @import 'components/blog';
 @import 'components/disable-wow';
 
-// // ---  COMPONENTS ** Forms  ---
 /*------------------------------------------------------------------
 15. Search form / .search-form
 -------------------------------------------------------------------*/
@@ -163,7 +154,6 @@ Version: 		1.2.7
 -------------------------------------------------------------------*/
 @import 'components/comment-form';
 
-// ---  PAGES  ---
 /*------------------------------------------------------------------
 17. Contact page
 -------------------------------------------------------------------*/
@@ -189,7 +179,6 @@ Version: 		1.2.7
 -------------------------------------------------------------------*/
 @import 'components/backgrounds';
 
-// --- INTRO PAGE ---
 @import 'components/intro-page';
 
 /*------------------------------------------------------------------
