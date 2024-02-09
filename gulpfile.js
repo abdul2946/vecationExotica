@@ -1,16 +1,26 @@
 import gulp from "gulp";
 import autoPrefixer from "gulp-autoprefixer";
-import * as dartSass from "sass";
+import * as sass from "sass";
 import gulpSass from "gulp-sass";
 
-const sass = gulpSass(dartSass);
-// const browserSync = require("browser-sync")
+const scss = gulpSass(sass);
 
-gulp.task("buildcss", () => {
+export const build = async () => {
 	gulp
-		.src("./build/scss/**.scss")
-		.pipe(autoPrefixer())
-		.pipe(sass().on("error", sass.logError))
-		.pipe(gulp.dest("./css/"));
-});
+		.src("./build/scss/*.scss")
+		.pipe(await scss().on("error", scss.logError))
+		.pipe(
+			await autoPrefixer({
+				browsers: ["last 99 versions"],
+				cascade: false,
+			})
+		)
+		.pipe(gulp.dest("./css"));
+};
+export const watchCss = () => {
+	gulp.watch("./build/scss/*.scss", build);
+};
 
+const series = gulp.series(build, watchCss);
+
+export default series;
